@@ -3,6 +3,9 @@
     <!-- Шапка -->
     <router-view name="header" />
 
+    <!-- Сайдбар -->
+    <router-view name="sidebar" />
+
     <!-- Основной контент -->
     <v-main>
       <router-view />

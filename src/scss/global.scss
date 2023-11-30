@@ -1,1 +1,12 @@
-// Some global styles...
+.page {
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
