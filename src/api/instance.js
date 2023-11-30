@@ -13,7 +13,7 @@ instance.interceptors.response.use(
     return response
   },
   async (error) => {
-    if (error.response.status ===  404) {
+    if (error.response.status ===  401) {
       await router.push({ name: 'login' })
     }
 
