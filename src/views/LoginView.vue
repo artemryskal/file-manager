@@ -7,7 +7,7 @@
         <div class="d-flex align-center justify-space-between">
           <!-- Заголовок -->
           <h1>
-            Регистрация
+            Вход
           </h1>
           <!-- Ссылка создать аккаунт -->
           <router-link :to="{ name: 'signup' }" class="text-text_grey font-weight-bold">
