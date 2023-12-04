@@ -5,7 +5,7 @@ export const useUserStore = defineStore('user', () => {
   /** Signup action */
   const signUp = async (payload) => {
     try {
-      const { data } = await instance.post('api/auth/registration', payload)
+      const { data } = await instance.post('auth/registration', payload)
       localStorage.setItem('jwt_key', `Bearer ${data}`)
       return true
     } catch (e) {
@@ -16,7 +16,7 @@ export const useUserStore = defineStore('user', () => {
   /** Login action */
   const login = async (payload) => {
     try {
-      const { data } = await instance.post('api/auth/login', payload)
+      const { data } = await instance.post('auth/login', payload)
       localStorage.setItem('jwt_key', `Bearer ${data}`)
       return true
     }
