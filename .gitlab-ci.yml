@@ -7,7 +7,7 @@ build:
   image: node:latest
   stage: build
   variables:
-    API_URL: "https://gostdoc.ru/api/"
+    VITE_API_URL: "https://gostdoc.ru/api/"
   script:
     - npm install
     - npm run build
