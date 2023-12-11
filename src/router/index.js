@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const MainLayout = () => import('@/layouts/MainLayout.vue')
+const HomeView = () => import('@/views/HomeView.vue')
 const DocsView = () => import('@/views/DocsView.vue')
 const LoginView = () => import('@/views/LoginView.vue')
 const SignupView = () => import('@/views/SignupView.vue')
@@ -13,6 +14,10 @@ const router = createRouter({
       path: '/',
       component: MainLayout,
       children: [
+        {
+          path: '/',
+          component: HomeView
+        },
         // Страница документов
         {
           path: 'docs',
