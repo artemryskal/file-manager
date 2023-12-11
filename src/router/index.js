@@ -16,7 +16,7 @@ const router = createRouter({
       children: [
         {
           path: '/',
-          component: HomeView
+          component: HomeView,
         },
         // Страница документов
         {
@@ -52,7 +52,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.matched.some(route => route.meta.auth)) {
+  if (to.matched.some((route) => route.meta.auth)) {
     if (!localStorage.getItem('jwt_key')) {
       return next({ name: 'login' })
     }

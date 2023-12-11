@@ -1,11 +1,6 @@
 <template>
-  <v-expansion-panels
-    v-model="panels"
-    class="sidebar__container">
-    <v-expansion-panel
-      hide-actions
-      class="sidebar__action"
-    >
+  <v-expansion-panels v-model="panels" class="sidebar__container">
+    <v-expansion-panel hide-actions class="sidebar__action">
       <template #title>
         <span class="d-flex align-center pa-0">
           <v-icon

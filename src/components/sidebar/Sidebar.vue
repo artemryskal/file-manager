@@ -1,9 +1,5 @@
 <template>
-  <v-navigation-drawer
-    app
-    permanent
-    tag="aside"
-    class="sidebar">
+  <v-navigation-drawer app permanent tag="aside" class="sidebar">
     <!-- Кнопка домой и поиск -->
     <SidebarHeader />
 
@@ -13,14 +9,10 @@
     </div>
 
     <!-- Избранные документы -->
-    <SidebarDocs
-      title="Избранные документы"
-      :docs="docs" />
+    <SidebarDocs title="Избранные документы" :docs="docs" />
 
     <!-- Остальные документы -->
-    <SidebarDocs
-      title="Остальные документы"
-      :docs="docs" />
+    <SidebarDocs title="Остальные документы" :docs="docs" />
   </v-navigation-drawer>
 </template>
 

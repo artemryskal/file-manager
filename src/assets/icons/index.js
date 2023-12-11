@@ -26,7 +26,7 @@ const icons = {
 }
 
 const custom = {
-  component: (props) => h(icons[props.icon])
+  component: (props) => h(icons[props.icon]),
 }
 
 export { custom }

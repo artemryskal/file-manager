@@ -17,20 +17,17 @@
           </v-btn>
 
           <!-- Превью -->
-          <img src="@/assets/images/item-example.png" alt="Превью документа" class="item__image">
+          <img
+            src="@/assets/images/item-example.png"
+            alt="Превью документа"
+            class="item__image" />
           <!-- Название -->
-          <div class="item__name">
-            Документ 2
-          </div>
+          <div class="item__name">Документ 2</div>
           <div class="d-flex align-center">
             <!-- Аватар -->
-            <div class="item__author">
-              U
-            </div>
+            <div class="item__author">U</div>
             <!-- Последнее редактирование -->
-            <div class="item__author-name">
-              3 месяца назад
-            </div>
+            <div class="item__author-name">3 месяца назад</div>
           </div>
         </router-link>
       </template>
@@ -49,7 +46,7 @@ const props = defineProps({
   item: {
     type: Object,
     required: true,
-  }
+  },
 })
 const contextStore = useContextStore()
 const item = ref(null)
@@ -58,7 +55,7 @@ const opened = computed(() => contextStore.openedId === props.item.id)
 const x = ref(0)
 const y = ref(0)
 
-onClickOutside(item, () => contextStore.openedId = null)
+onClickOutside(item, () => (contextStore.openedId = null))
 const showContext = (e) => {
   const rect = item.value.getBoundingClientRect()
   contextStore.openedId = props.item.id
@@ -70,7 +67,7 @@ const showContext = (e) => {
 <style lang="scss" scoped>
 .item {
   position: relative;
-  
+
   &__fav {
     position: absolute;
     top: 10px;

@@ -19,8 +19,7 @@ export const useUserStore = defineStore('user', () => {
       const { data } = await instance.post('auth/login', payload)
       localStorage.setItem('jwt_key', `Bearer ${data}`)
       return true
-    }
-    catch (e) {
+    } catch (e) {
       return false
     }
   }
