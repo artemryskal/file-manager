@@ -6,13 +6,8 @@
     :close-on-content-click="false"
     class="user">
     <template #activator="{ props }">
-      <v-btn
-        v-bind="props"
-        elevation="0"
-        class="user__activator">
-        <span class="user__avatar">
-          И
-        </span>
+      <v-btn v-bind="props" elevation="0" class="user__activator">
+        <span class="user__avatar">И</span>
         Имя
         <v-icon
           icon="iconArrow"
@@ -25,9 +20,7 @@
 
     <v-list class="dropdown" min-width="240">
       <div class="d-flex flex-column align-center">
-        <span class="user__avatar user__avatar--big">
-          И
-        </span>
+        <span class="user__avatar user__avatar--big">И</span>
       </div>
     </v-list>
   </v-menu>

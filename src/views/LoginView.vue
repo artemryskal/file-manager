@@ -6,11 +6,11 @@
       <div class="d-flex flex-column justify-center flex-grow-1">
         <div class="d-flex align-center justify-space-between">
           <!-- Заголовок -->
-          <h1>
-            Вход
-          </h1>
+          <h1>Вход</h1>
           <!-- Ссылка создать аккаунт -->
-          <router-link :to="{ name: 'signup' }" class="text-text_grey font-weight-bold">
+          <router-link
+            :to="{ name: 'signup' }"
+            class="text-text_grey font-weight-bold">
             Нет аккаунта? Создать
           </router-link>
         </div>
@@ -72,7 +72,7 @@ const state = reactive({
 })
 
 const login = async () => {
-  if (!await(userStore.login(state))) return false
+  if (!(await userStore.login(state))) return false
   router.push({ name: 'docs' })
 }
 </script>

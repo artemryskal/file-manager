@@ -8,7 +8,10 @@
         </v-btn>
 
         <!-- Превью -->
-        <img src="@/assets/images/item-example.png" alt="Превью" class="item__preview">
+        <img
+          src="@/assets/images/item-example.png"
+          alt="Превью"
+          class="item__preview" />
 
         <!-- Название -->
         Документ 1
@@ -16,27 +19,17 @@
     </td>
 
     <!-- Последнее редактирование -->
-    <td>
-      10 минут назад
-    </td>
+    <td>10 минут назад</td>
 
     <!-- Создано -->
-    <td>
-      3 дня назад
-    </td>
+    <td>3 дня назад</td>
 
     <!-- Редакторы -->
     <td>
       <div class="d-flex align-center">
-        <div class="item__author">
-          U
-        </div>
-        <div class="item__author">
-          U
-        </div>
-        <div class="item__author">
-          U
-        </div>
+        <div class="item__author">U</div>
+        <div class="item__author">U</div>
+        <div class="item__author">U</div>
       </div>
     </td>
 
@@ -44,10 +37,7 @@
     <td>
       <v-menu>
         <template #activator="{ props }">
-          <v-btn
-            v-bind="props"
-            :elevation="0"
-            class="item__more adjust-radius">
+          <v-btn v-bind="props" :elevation="0" class="item__more adjust-radius">
             <v-icon icon="iconMore" />
           </v-btn>
         </template>
@@ -64,7 +54,7 @@
   &:hover &__fav {
     opacity: 1;
   }
-  
+
   &__fav {
     width: 16px;
     height: 16px;

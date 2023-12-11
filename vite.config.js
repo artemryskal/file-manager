@@ -12,15 +12,12 @@ export default defineConfig({
       dirs: ['src/components'],
     }),
     AutoImport({
-      imports: [
-        'vue',
-        'vue-router',
-      ]
+      imports: ['vue', 'vue-router'],
     }),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
 })
