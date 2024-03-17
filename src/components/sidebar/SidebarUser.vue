@@ -7,7 +7,7 @@
     class="user">
     <template #activator="{ props }">
       <v-btn v-bind="props" elevation="0" class="user__activator">
-        <span class="user__avatar">И</span>
+        <span class="user__avatar-item">И</span>
         Имя
         <v-icon
           icon="iconArrow"
@@ -19,8 +19,28 @@
     </template>
 
     <v-list class="dropdown" min-width="240">
+      <!-- Аватарка пользователя -->
       <div class="d-flex flex-column align-center">
-        <span class="user__avatar user__avatar--big">И</span>
+        <div class="user__avatar">
+          <span class="user__avatar-item user__avatar-item--big">И</span>
+          <!-- Кнопка изменить -->
+          <v-btn icon elevation="0" class="user__edit">
+            <v-icon icon="iconEdit" />
+          </v-btn>
+        </div>
+        <!-- Имя и почта -->
+        <div class="user__name">Имя</div>
+        <div class="user__email">
+          example@mail.ru
+        </div>
+      </div>
+
+      <!-- Пользовательские действия -->
+      <div class="d-flex flex-column align-center mt-4">
+        <v-list-item class="dropdown__item">Настройки</v-list-item>
+        <v-divider class="my-1"></v-divider>
+        <v-list-item class="dropdown__item">Добавить в аккаунт</v-list-item>
+        <v-list-item class="dropdown__item">Выйти</v-list-item>
       </div>
     </v-list>
   </v-menu>
@@ -43,8 +63,12 @@ const opened = ref(false)
     text-transform: capitalize;
     font-size: 1.16rem;
   }
-
+  
   &__avatar {
+    position: relative;
+  }
+
+  &__avatar-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,6 +89,29 @@ const opened = ref(false)
 
   &__dropdown-icon {
     margin-left: 1.25rem;
+  }
+
+  &__name {
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 100%;
+  }
+
+  &__email {
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 100%;
+    color: rgb(var(--v-theme-text_grey));
+  }
+
+  &__edit {
+    position: absolute;
+    right: -7px;
+    bottom: 0;
+    width: 22px !important;
+    height: 22px !important;
+    padding: 0 !important;
+    border-radius: 11px !important;
   }
 }
 </style>

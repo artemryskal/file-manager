@@ -8,17 +8,17 @@ const instance = axios.create({
   },
 })
 
-instance.interceptors.response.use(
-  (response) => {
-    return response
-  },
-  async (error) => {
-    if (error.response.status === 401) {
-      await router.push({ name: 'login' })
-    }
-
-    return Promise.reject(error)
-  }
-)
+// instance.interceptors.response.use(
+//   (response) => {
+//     return response
+//   },
+//   async (error) => {
+//     if (error.response.status === 401) {
+//       await router.push({ name: 'login' })
+//     }
+//
+//     return Promise.reject(error)
+//   }
+// )
 
 export default instance
