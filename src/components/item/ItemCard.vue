@@ -61,6 +61,10 @@ const showContext = (e) => {
   contextStore.openedId = props.item.id
   x.value = e.clientX - rect.left
   y.value = e.clientY - rect.top
+
+  if (x.value + 159 > window.innerWidth) {
+    x.value = window.innerWidth - 20
+  }
 }
 </script>
 

@@ -10,6 +10,7 @@ import IconStarOutlined from '@/assets/icons/IconStarOutlined.vue'
 import IconMore from '@/assets/icons/IconMore.vue'
 import IconLogo from '@/assets/icons/IconLogo.vue'
 import IconPasswordShow from '@/assets/icons/IconPasswordShow.vue'
+import IconEdit from '@/assets/icons/IconEdit.vue'
 
 const icons = {
   iconHome: IconHome,
@@ -23,6 +24,7 @@ const icons = {
   iconMore: IconMore,
   iconLogo: IconLogo,
   iconPasswordShow: IconPasswordShow,
+  iconEdit: IconEdit,
 }
 
 const custom = {

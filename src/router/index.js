@@ -5,6 +5,7 @@ const HomeView = () => import('@/views/HomeView.vue')
 const DocsView = () => import('@/views/DocsView.vue')
 const LoginView = () => import('@/views/LoginView.vue')
 const SignupView = () => import('@/views/SignupView.vue')
+const NotFoundView = () => import('@/views/NotFoundView.vue')
 const Sidebar = () => import('@/components/sidebar/Sidebar.vue')
 
 const router = createRouter({
@@ -46,18 +47,26 @@ const router = createRouter({
             default: SignupView,
           },
         },
+        // Страница 404
+        {
+          path: '/:pathMatch(.*)*',
+          name: '404',
+          components: {
+            default: NotFoundView,
+          }
+        }
       ],
     },
   ],
 })
 
-router.beforeEach((to, from, next) => {
-  if (to.matched.some((route) => route.meta.auth)) {
-    if (!localStorage.getItem('jwt_key')) {
-      return next({ name: 'login' })
-    }
-  }
-  next()
-})
+// router.beforeEach((to, from, next) => {
+//   if (to.matched.some((route) => route.meta.auth)) {
+//     if (!localStorage.getItem('jwt_key')) {
+//       return next({ name: 'login' })
+//     }
+//   }
+//   next()
+// })
 
 export default router
