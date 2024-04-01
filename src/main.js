@@ -1,15 +1,23 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { h, createApp } from 'vue'
+import singleSpaVue from 'single-spa-vue'
 import App from './App.vue'
 import router from '@/router'
 import vuetify from '@/plugins/vuetify'
-
+import { createPinia } from 'pinia'
 import '@/scss/main.scss'
 
-const app = createApp(App)
+const lc = singleSpaVue({
+  createApp,
+  appOptions: {
+    render() {
+      return h(App, {})
+    },
+  },
+  handleInstance(instance, props) {
+    instance.use(router)
+    instance.use(vuetify)
+    instance.use(createPinia())
+  },
+})
 
-app.use(createPinia())
-app.use(router)
-app.use(vuetify)
-
-app.mount('#app')
+export const { bootstrap, mount, unmount } = lc

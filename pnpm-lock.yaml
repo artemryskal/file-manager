@@ -14,6 +14,9 @@ dependencies:
   pinia:
     specifier: ^2.1.6
     version: 2.1.7(vue@3.4.21)
+  single-spa-vue:
+    specifier: ^3.0.0
+    version: 3.0.0
   vue:
     specifier: ^3.3.4
     version: 3.4.21
@@ -24,7 +27,7 @@ dependencies:
 devDependencies:
   '@vitejs/plugin-vue':
     specifier: ^4.3.4
-    version: 4.6.2(vite@4.5.2)(vue@3.4.21)
+    version: 4.6.2(vite@4.5.3)(vue@3.4.21)
   '@vueuse/core':
     specifier: ^10.6.1
     version: 10.9.0(vue@3.4.21)
@@ -45,7 +48,7 @@ devDependencies:
     version: 0.25.2(vue@3.4.21)
   vite:
     specifier: ^4.4.9
-    version: 4.5.2(sass@1.72.0)
+    version: 4.5.3(sass@1.72.0)
   vuetify:
     specifier: ^3.3.20
     version: 3.5.9(vue@3.4.21)
@@ -323,14 +326,14 @@ packages:
     resolution: {integrity: sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==}
     dev: true
 
-  /@vitejs/plugin-vue@4.6.2(vite@4.5.2)(vue@3.4.21):
+  /@vitejs/plugin-vue@4.6.2(vite@4.5.3)(vue@3.4.21):
     resolution: {integrity: sha512-kqf7SGFoG+80aZG6Pf+gsZIVvGSCKE98JbiWqcCV9cThtg91Jav0yvYFC9Zb+jKetNGF6ZKeoaxgZfND21fWKw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.5.2(sass@1.72.0)
+      vite: 4.5.3(sass@1.72.0)
       vue: 3.4.21
     dev: true
 
@@ -886,6 +889,10 @@ packages:
     resolution: {integrity: sha512-6FtHJEvt+pVMIB9IBY+IcCJ6Z5f1iQnytgyfKMhDKgmzYG+TeH/wx1y3l27rshSbLiSanrR9ffZDrEsmjlQF2g==}
     dev: true
 
+  /single-spa-vue@3.0.0:
+    resolution: {integrity: sha512-aw4KzaELuWo5pev117C0kSPtcj96vVbml+VssIKKs1aSGv2zA1nBK/mW/jlU8J1jEHlvxadBrDNDANVpqPrHxQ==}
+    dev: false
+
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -1000,8 +1007,8 @@ packages:
       webpack-virtual-modules: 0.6.1
     dev: true
 
-  /vite@4.5.2(sass@1.72.0):
-    resolution: {integrity: sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==}
+  /vite@4.5.3(sass@1.72.0):
+    resolution: {integrity: sha512-kQL23kMeX92v3ph7IauVkXkikdDRsYMGTVl5KY2E9OY4ONLvkHf04MDTbnfo6NKxZiDLWzVpP5oTa8hQD8U3dg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
