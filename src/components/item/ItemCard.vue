@@ -8,7 +8,7 @@
       <template #activator>
         <!-- Карточка документа -->
         <router-link
-          to="#"
+          to="/editor/example"
           class="item__card"
           @contextmenu.prevent="showContext">
           <!-- Кнопка добавить/удалить в избранное -->

@@ -1,5 +1,5 @@
 <template>
-  <tr class="item">
+  <tr class="item" @click="moveToEdit">
     <td>
       <div class="d-flex align-center">
         <!-- Кнопка добавить/удалить в избранное -->
@@ -48,6 +48,14 @@
     </td>
   </tr>
 </template>
+
+<script setup>
+const router = useRouter()
+
+const moveToEdit = () => {
+  router.push('/editor/123')
+}
+</script>
 
 <style lang="scss" scoped>
 .item {

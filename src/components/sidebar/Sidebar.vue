@@ -35,6 +35,8 @@ const docs = [
 
 <style lang="scss" scoped>
 .sidebar {
+  position: fixed !important;
+
   :deep(.sidebar__container) {
     padding-top: 15px;
     padding-bottom: 15px;
