@@ -22,6 +22,8 @@ publish:
     - git tag -d $tagname
     - git commit --amend -m "[ci skip] ${commitMessage}" --no-verify
     - git tag -a $tagname -m ''
+    - git config --global user.email "artemryskal01@gmail.com"
+    - git config --global user.name "artemryskal"
 
     # Публикация в gitlab
     - git push https://${GIT_SYNC_USER}:${GIT_SYNC_TOKEN}@git.nlmk.com/$CI_PROJECT_PATH.git --follow-tags main:main
