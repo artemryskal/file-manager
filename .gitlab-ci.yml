@@ -21,7 +21,7 @@ publish:
     - version=${tagname:1}
     # Решение проблемы с циклическим вызовом
     - git tag -d $tagname
-    - git commit --amend -m &quot;[ci skip] ${commitMessage}&quot; --no-verify
+    - git commit --amend -m "[ci skip] ${commitMessage}" --no-verify
     - git tag -a $tagname -m ''
 
     # Публикация в gitlab
