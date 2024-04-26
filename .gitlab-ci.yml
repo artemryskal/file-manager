@@ -15,7 +15,6 @@ publish:
     - git config --global user.name "${GIT_USER_NAME}"
     - yarn
     - yarn build
-    - yarn standard-version
     - commitMessage=$(git log -1 --pretty=%B)
     - tagname=$(git tag --points-at HEAD)
     - version=${tagname:1}
